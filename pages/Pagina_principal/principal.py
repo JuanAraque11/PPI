@@ -6,6 +6,7 @@ import info
 import login
 import recetas
 import register
+import secun
 
 
 # Función principal
@@ -75,9 +76,9 @@ def main():
             if not estado:
                 st.info("Por favor, inicie sesión.")
             else:
-                
+                secun.main()
                 # Redirigir al usuario a un enlace después de iniciar sesión
-                st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
+                # st.markdown("[Ir al enlace](https://unmundoentuplato-funciones.streamlit.app/)")
 
 
         elif opcion == "Actualizar contraseña":
