@@ -7,6 +7,7 @@ import login
 import recetas
 import register
 import secun
+import funciones
 
 
 # Función principal
@@ -62,6 +63,16 @@ def main():
 
         if opcion == "Información y contacto":
             info.info1()
+            # Sección de codigo ISO
+            st.header("Código ISO")
+            nombrecomun = st.text_input("Ingrese el nombre del país:")
+            codigonombre = None
+            if st.button("Ver Código ISO"):
+                codigonombre = funciones.extraer_codigo_iso(nombrecomun)
+                if codigonombre:
+                    st.write(f"El código ISO alfa-2 de {nombrecomun} es: {codigonombre}")
+                else:
+                    st.write(f"No se encontró el código ISO alfa-2 para {nombrecomun}.")
 
         elif opcion == "Registrarse":
             register.register_user()
